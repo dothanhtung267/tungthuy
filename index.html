@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Save The Date | Tung & Thuy</title>
+
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<rect width='100' height='100' fill='white'/>
+<text x='50' y='58' font-size='34' text-anchor='middle' font-family='Georgia, serif' fill='black'>T%26T</text>
+</svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:#d1d1d1;
+    font-family:'Cormorant Garamond',serif;
+    color:#111;
+    overflow-x:hidden;
+}
+
+/* Intro Screen */
+
+.intro-screen{
+    position:fixed;
+    inset:0;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    animation:introExit .9s ease forwards;
+    animation-delay:2s;
+}
+
+.intro-logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(36px,5vw,64px);
+    font-weight:300;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+
+    opacity:0;
+    transform:translateY(20px);
+
+    animation:introReveal 1.2s ease forwards;
+}
+
+@keyframes introReveal{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes introExit{
+    to{
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+    }
+}
+
+/* Card */
+
+.card{
+    position:relative;
+    width:min(620px,90vw);
+
+    opacity:0;
+    transform:translateY(16px);
+    animation:cardReveal .9s ease forwards;
+    animation-delay:2.15s;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url('https://st2.depositphotos.com/1032577/5536/i/450/depositphotos_55361659-White-watercolor-paper-texture.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    padding:
+        clamp(48px,8vw,80px)
+        clamp(36px,7vw,72px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.12);
+
+    overflow:hidden;
+}
+
+@keyframes cardReveal{
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.content{
+    position:relative;
+}
+
+/* Text Animation */
+
+.fade-item{
+    opacity:0;
+    transform:translateY(12px);
+    animation:fadeInUp .7s ease forwards;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Header */
+
+.intro{
+    margin-top:14%;
+    text-transform:uppercase;
+    letter-spacing:.24em;
+    font-size:16px;
+    line-height:1.8;
+    animation-delay:2.35s;
+}
+
+.names{
+    margin-top:40px;
+    font-weight:300;
+    font-size:clamp(48px,8vw,78px);
+    letter-spacing:.10em;
+    line-height:.95;
+    animation-delay:2.53s;
+}
+
+.ampersand{
+    font-size:.58em;
+    vertical-align:0.12em;
+    letter-spacing:0;
+    opacity:.8;
+}
+
+/* Details */
+
+.details{
+    margin-top:140px;
+    text-align:right;
+    line-height:1.35;
+}
+
+.event-one{
+    animation-delay:2.71s;
+}
+
+.event-two{
+    animation-delay:3.03s;
+}
+
+.date{
+    font-family:'Montserrat',sans-serif;
+    font-size:clamp(28px,4vw,38px);
+    font-weight:200;
+    letter-spacing:.12em;
+}
+
+.description{
+    margin-top:10px;
+    font-size:clamp(15px,2vw,18px);
+    letter-spacing:.04em;
+    opacity:.72;
+}
+
+.venue{
+    margin-top:4px;
+    font-size:clamp(22px,3vw,28px);
+    font-weight:400;
+    letter-spacing:.015em;
+}
+
+.divider{
+    width:100px;
+    height:1px;
+    background:rgba(0,0,0,.18);
+    margin:36px 0 40px auto;
+    opacity:0;
+    animation:fadeInUp .7s ease forwards;
+    animation-delay:2.89s;
+}
+
+.note{
+    margin-top:40px;
+    font-size:18px;
+    font-style:italic;
+    opacity:0;
+    animation:fadeInUp .7s ease forwards;
+    animation-delay:3.19s;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .card{
+        padding:48px 32px;
+    }
+
+    .intro{
+        margin-top:8%;
+        font-size:14px;
+    }
+
+    .names{
+        font-size:54px;
+    }
+
+    .details{
+        margin-top:100px;
+    }
+
+    .date{
+        font-size:30px;
+    }
+
+    .venue{
+        font-size:23px;
+    }
+}
+
+@media(max-width:480px){
+
+    .card{
+        width:92vw;
+    }
+
+    .intro-logo{
+        font-size:30px;
+        letter-spacing:.22em;
+    }
+
+    .intro{
+        font-size:13px;
+        letter-spacing:.20em;
+    }
+
+    .names{
+        font-size:44px;
+    }
+
+    .details{
+        margin-top:80px;
+    }
+
+    .date{
+        font-size:24px;
+    }
+
+    .description{
+        font-size:15px;
+    }
+
+    .venue{
+        font-size:20px;
+    }
+
+    .note{
+        font-size:16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="intro-screen">
+    <div class="intro-logo">
+        Save The Date
+    </div>
+</div>
+
+<div class="card">
+
+    <div class="content">
+
+        <div class="intro fade-item">
+            Save The Date<br>
+            for
+        </div>
+
+        <div class="names fade-item">
+            Tung <span class="ampersand">&</span>
+            Thuy
+        </div>
+
+        <div class="details">
+
+            <div class="event fade-item event-one">
+                <div class="date">14.11.26</div>
+                <div class="description">Intimate Wedding</div>
+                <div class="venue">JW Marriott, HCMC</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="event fade-item event-two">
+                <div class="date">12.12.2026</div>
+                <div class="description">Traditional Vietnamese Wedding</div>
+                <div class="venue">Venue to be Confirmed, Hanoi</div>
+            </div>
+
+            <div class="note">
+                Formal Invitation to Follow
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
