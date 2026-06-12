@@ -6,11 +6,15 @@
 
 <title>Save The Date | Tung & Thuy</title>
 
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<rect width='100' height='100' fill='white'/>
-<text x='50' y='58' font-size='34' text-anchor='middle' font-family='Georgia, serif' fill='black'>T%26T</text>
-</svg>">
+<meta name="description" content="Save The Date | Tung & Thuy">
+
+<meta property="og:title" content="Save The Date | Tung & Thuy">
+<meta property="og:description" content="Formal invitation to follow">
+<meta property="og:image" content="https://img.upanh.moe/8gG6th1N/3cd712cc-3756-4f3b-b050-40573dab0f30-1.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tungthuy.com">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='white'/%3E%3Ctext x='50' y='58' font-size='32' text-anchor='middle' font-family='Georgia, serif' fill='black'%3ET%26T%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,18 +32,17 @@
 html,
 body{
     width:100%;
-    min-height:100%;
+    height:100%;
 }
 
 body{
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px 20px;
     background:#d1d1d1;
     font-family:'Cormorant Garamond',serif;
     color:#111;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 
 /* Intro Screen */
@@ -95,7 +98,9 @@ body{
 
 .card{
     position:relative;
-    width:min(620px,90vw);
+
+    width:min(520px,88vw);
+    height:min(760px,92vh);
 
     opacity:0;
     transform:translateY(16px);
@@ -114,8 +119,8 @@ body{
     background-repeat:no-repeat;
 
     padding:
-        clamp(48px,8vw,80px)
-        clamp(36px,7vw,72px);
+        clamp(36px,5vh,60px)
+        clamp(34px,5vw,58px);
 
     box-shadow:
         0 20px 50px rgba(0,0,0,.12);
@@ -136,6 +141,9 @@ body{
 
 .content{
     position:relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
 }
 
 /* Text Animation */
@@ -160,18 +168,18 @@ body{
 /* Header */
 
 .intro{
-    margin-top:14%;
+    margin-top:6%;
     text-transform:uppercase;
     letter-spacing:.24em;
-    font-size:16px;
+    font-size:15px;
     line-height:1.8;
     animation-delay:2.35s;
 }
 
 .names{
-    margin-top:40px;
+    margin-top:34px;
     font-weight:300;
-    font-size:clamp(48px,8vw,78px);
+    font-size:clamp(44px,6vw,68px);
     letter-spacing:.10em;
     line-height:.95;
     animation-delay:2.53s;
@@ -187,7 +195,7 @@ body{
 /* Details */
 
 .details{
-    margin-top:140px;
+    margin-top:auto;
     text-align:right;
     line-height:1.35;
 }
@@ -202,21 +210,21 @@ body{
 
 .date{
     font-family:'Montserrat',sans-serif;
-    font-size:clamp(28px,4vw,38px);
+    font-size:clamp(24px,3.2vw,34px);
     font-weight:200;
     letter-spacing:.12em;
 }
 
 .description{
     margin-top:10px;
-    font-size:clamp(15px,2vw,18px);
+    font-size:clamp(14px,1.6vw,17px);
     letter-spacing:.04em;
     opacity:.72;
 }
 
 .venue{
     margin-top:4px;
-    font-size:clamp(22px,3vw,28px);
+    font-size:clamp(20px,2.4vw,26px);
     font-weight:400;
     letter-spacing:.015em;
 }
@@ -225,15 +233,15 @@ body{
     width:100px;
     height:1px;
     background:rgba(0,0,0,.18);
-    margin:36px 0 40px auto;
+    margin:30px 0 34px auto;
     opacity:0;
     animation:fadeInUp .7s ease forwards;
     animation-delay:2.89s;
 }
 
 .note{
-    margin-top:40px;
-    font-size:18px;
+    margin-top:34px;
+    font-size:17px;
     font-style:italic;
     opacity:0;
     animation:fadeInUp .7s ease forwards;
@@ -244,7 +252,16 @@ body{
 
 @media(max-width:768px){
 
+    body{
+        overflow:auto;
+        padding:32px 20px;
+        min-height:100%;
+    }
+
     .card{
+        width:90vw;
+        height:auto;
+        min-height:760px;
         padding:48px 32px;
     }
 
@@ -274,6 +291,7 @@ body{
 
     .card{
         width:92vw;
+        min-height:720px;
     }
 
     .intro-logo{
@@ -307,6 +325,42 @@ body{
     }
 
     .note{
+        font-size:16px;
+    }
+}
+
+@media(max-height:760px) and (min-width:769px){
+
+    .card{
+        height:92vh;
+        width:min(480px,86vw);
+        padding:34px 48px;
+    }
+
+    .intro{
+        margin-top:4%;
+        font-size:14px;
+    }
+
+    .names{
+        margin-top:28px;
+        font-size:56px;
+    }
+
+    .date{
+        font-size:28px;
+    }
+
+    .venue{
+        font-size:22px;
+    }
+
+    .divider{
+        margin:24px 0 28px auto;
+    }
+
+    .note{
+        margin-top:28px;
         font-size:16px;
     }
 }
