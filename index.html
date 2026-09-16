@@ -2,16 +2,16 @@
 
 
 <!--
-
+ 
    T U N G   &   T H U Y
    1 4 . 1 1 . 2 0 2 6
 
    👀 BẮT QUẢ TANG ĐANG SOI SOURCE CODE NHA!
-   Tính tìm bug hack thiệp cưới hay gì? 
-   Tự giác đóng F12 lại rồi chuẩn bị phong bì dày dày đi nha quý dzị!
+   Tính tìm bug hack hack thiệp cưới hay gì?
 
-   Chú rể :D
+   Đã đọc tới đây rùi thì hôm đó nhớ mời chú rể riêng 1 ly nha!!
 -->
+
 
 <html lang="en">
 <head>
@@ -67,7 +67,7 @@ body {
     background: #c8c5be;
     font-family: 'Cormorant Garamond', serif;
     color: #1f1f1f;
-    padding: 12px;
+    padding: 0;
 }
 
 .intro-screen {
@@ -114,12 +114,12 @@ body {
     }
 }
 
-/* Card: 8.5 by 11 ratio across all viewport sizes with equal 4-side padding */
+/* Card: Strict Letter ratio (8.5/11), dynamically maximized to screen width or height with a slim 2% margin */
 .card {
     position: relative;
     aspect-ratio: 8.5 / 11;
-    width: min(92vw, calc(94dvh * (8.5 / 11)), 520px);
-    max-height: 94dvh;
+    width: min(96vw, calc(96dvh * (8.5 / 11)));
+    max-height: 96dvh;
     opacity: 0;
     transform: translateY(16px);
     animation: cardReveal .9s ease forwards;
@@ -132,7 +132,7 @@ body {
     background-size: cover;
     background-position: center;
 
-    padding: clamp(28px, 6.8cqi, 54px);
+    padding: 6.5cqi;
     box-shadow: 0 20px 50px rgba(0, 0, 0, .14), 0 2px 6px rgba(0,0,0,.04);
     display: flex;
     flex-direction: column;
@@ -185,8 +185,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: clamp(14px, 4.2cqi, 26px);
-    gap: clamp(12px, 3.2cqi, 24px);
+    padding-bottom: 4.5cqi;
+    gap: 3.2cqi;
 }
 
 .names-section {
@@ -199,7 +199,7 @@ body {
 
 .person-name {
     font-family: 'Cinzel', serif;
-    font-size: clamp(28px, 9.4cqi, 50px);
+    font-size: 9.2cqi;
     font-weight: 400;
     letter-spacing: .28em;
     text-indent: .28em;
@@ -211,11 +211,11 @@ body {
 
 .connector {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 4.8cqi, 25px);
+    font-size: 4.6cqi;
     font-style: italic;
     font-weight: 300;
     color: #666;
-    margin: clamp(3px, 1.4cqi, 8px) 0;
+    margin: 1.4cqi 0;
     letter-spacing: .04em;
     text-align: center;
 }
@@ -230,7 +230,7 @@ body {
 
 .date-text {
     font-family: 'Cinzel', serif;
-    font-size: clamp(9.5px, 2.6cqi, 13px);
+    font-size: 2.6cqi;
     font-weight: 500;
     letter-spacing: .22em;
     text-indent: .22em;
@@ -241,11 +241,11 @@ body {
 
 .event-type {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(13.5px, 3.6cqi, 19px);
+    font-size: 3.6cqi;
     font-style: italic;
     font-weight: 300;
     color: #555;
-    margin-top: 3px;
+    margin-top: 0.6cqi;
     letter-spacing: .06em;
     text-align: center;
 }
@@ -255,25 +255,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: clamp(12px, 3.2cqi, 20px);
+    margin-bottom: 3.2cqi;
     animation-delay: 2.55s;
 }
 
 .the-lawn {
     font-family: 'Cinzel', serif;
-    font-size: clamp(9px, 2.4cqi, 12px);
+    font-size: 2.4cqi;
     font-weight: 500;
     letter-spacing: .24em;
     text-indent: .24em;
     text-transform: uppercase;
     color: #4A563C;
-    margin-bottom: 3px;
+    margin-bottom: 0.6cqi;
     text-align: center;
 }
 
 .venue-name {
     font-family: 'Cinzel', serif;
-    font-size: clamp(11px, 2.9cqi, 15px);
+    font-size: 2.9cqi;
     font-weight: 600;
     letter-spacing: .20em;
     text-indent: .20em;
@@ -292,14 +292,14 @@ body {
 
 .rsvp-button {
     font-family: 'Cinzel', serif;
-    font-size: clamp(9px, 2.2cqi, 10.5px);
+    font-size: 2.1cqi;
     letter-spacing: .24em;
     text-indent: .24em;
     text-transform: uppercase;
     color: #1a1a1a;
     background: transparent;
     border: 1px solid #1a1a1a;
-    padding: clamp(6px, 1.6cqi, 9px) clamp(18px, 5cqi, 28px);
+    padding: 1.6cqi 5cqi;
     cursor: pointer;
     transition: all 0.35s ease;
     outline: none;
@@ -312,16 +312,16 @@ body {
 }
 
 .dresscode-group {
-    margin-top: clamp(8px, 2.2cqi, 15px);
+    margin-top: 2.4cqi;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(4px, 1.2cqi, 7px);
+    gap: 1.2cqi;
 }
 
 .dresscode-label {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(12px, 3cqi, 14px);
+    font-size: 3cqi;
     font-style: normal;
     color: #444;
     letter-spacing: .06em;
@@ -331,12 +331,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(5px, 1.6cqi, 8px);
+    gap: 1.6cqi;
 }
 
 .palette-dot {
-    width: clamp(10px, 2.6cqi, 13.5px);
-    height: clamp(10px, 2.6cqi, 13.5px);
+    width: 2.6cqi;
+    height: 2.6cqi;
     border-radius: 50%;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
@@ -349,13 +349,13 @@ body {
 
 .timeline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(10px, 2.6cqi, 13px);
+    font-size: 2.55cqi;
     font-style: normal;
     font-weight: 400;
     text-transform: none;
     letter-spacing: .02em;
     color: #444;
-    margin-top: clamp(8px, 2cqi, 13px);
+    margin-top: 2.2cqi;
     line-height: 1.35;
     max-width: 95%;
     text-align: center;
@@ -555,7 +555,6 @@ body {
 
 <body>
 
-
 <div class="intro-screen">
     <div class="intro-logo">
         Save The Date
@@ -565,7 +564,7 @@ body {
 <div class="card">
     <div class="content">
 
-        <!-- Upper section: gently lifted above optical center without crowding the top border -->
+        <!-- Upper section: elevated gently above center -->
         <div class="upper-section">
             <div class="names-section fade-item">
                 <div class="person-name">TUNG</div>
@@ -592,7 +591,7 @@ body {
                 <div class="palette-dots">
                     <span class="palette-dot" style="background-color: #FAF7F2;"></span>
                     <span class="palette-dot" style="background-color: #F6E7B4;"></span>
-               
+                    <span class="palette-dot" style="background-color: #7A5C4A;"></span>
                     <span class="palette-dot" style="background-color: #3D4339;"></span>
                 </div>
             </div>
@@ -658,11 +657,11 @@ body {
         "color: #111; font-weight: bold;"
     );
     console.log(
-        "%c👀 Hellu bạn hiền",
+        "%cHellu bạn hiềnnnn",
         "background: #111; color: #fff; font-size: 16px; padding: 6px 12px; border-radius: 4px; font-weight: bold;"
     );
     console.log(
-        "%cĐi ăn cưới thì nhớ đi đúng giờ + mừng phong bì thật dày nhoaaa 😉",
+        "%cĐi ăn cưới thì nhớ đi đúng giờ + mừng phong bì thật dày nhoaaaa <3",
         "color: #666; font-size: 13px; font-style: italic;"
     );
 
