@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<!--
+
+<!-- 
 
    T U N G   &   T H U Y
    1 4 . 1 1 . 2 0 2 6
@@ -11,6 +12,7 @@
 
    Chú rể.
 -->
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -212,8 +214,18 @@ body {
     opacity: .72;
 }
 
+.sub-venue {
+    margin-top: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #4A563C;
+}
+
 .venue {
-    margin-top: 4px;
+    margin-top: 2px;
     font-size: clamp(20px, 2.4vw, 26px);
     font-weight: 400;
     letter-spacing: .015em;
@@ -540,9 +552,10 @@ body {
 
             <div class="event fade-item event-one">
                 <div class="date">14.11.26</div>
-                <div class="description">Intimate Wedding</div>
+
                 <div class="venue">JW Marriott Saigon</div>
             </div>
+                <div class="sub-venue">The Lawn</div>
 
             <div class="rsvp-wrapper fade-item">
                 <button class="rsvp-button" id="openModalBtn">RSVP</button>
@@ -579,7 +592,7 @@ body {
 
             <div class="form-group">
                 <label class="form-label" for="guestName">Your Full Name</label>
-                <input class="form-input" type="text" id="guestName" name="name" placeholder="eg. Pea" required>
+                <input class="form-input" type="text" id="guestName" name="name" placeholder="Pea" required>
             </div>
 
             <label class="checkbox-group">
@@ -589,7 +602,7 @@ body {
 
             <div class="form-group" id="plusOneField" style="display: none;">
                 <label class="form-label" for="plusOneName">Plus One's Name (Optional)</label>
-                <input class="form-input" type="text" id="plusOneName" name="plus_one_name" placeholder="eg. Báo">
+                <input class="form-input" type="text" id="plusOneName" name="plus_one_name" placeholder="Báo">
             </div>
 
             <button type="submit" class="btn-submit" id="submitBtn">Send RSVP</button>
