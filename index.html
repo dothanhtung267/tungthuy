@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 
-<!--
+<!--   
 
-   T Ù N G béo  &   T H Ủ Y béo
+   T U N G   &   T H U Y
    1 4 . 1 1 . 2 0 2 6
 
    👀 BẮT QUẢ TANG ĐANG SOI SOURCE CODE NHA!
    Tính tìm bug hack thiệp cưới hay gì? 
    Tự giác đóng F12 lại rồi chuẩn bị phong bì dày dày đi nha quý dzị!
 
-   Chú rể. 
+   Chú rể.
 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Save The Date | Tung & Thuy</title>
 
@@ -59,11 +59,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-height: 100dvh; /* Giải quyết triệt để thanh URL trên Safari iOS */
     background: #c8c5be;
     font-family: 'Cormorant Garamond', serif;
     color: #1f1f1f;
     overflow-x: hidden;
-    padding: 40px 16px;
+    padding: 24px 16px;
 }
 
 .intro-screen {
@@ -83,6 +84,7 @@ body {
     font-size: clamp(28px, 4.5vw, 50px);
     font-weight: 400;
     letter-spacing: .32em;
+    text-indent: .32em;
     text-transform: uppercase;
     color: #222;
     opacity: 0;
@@ -111,8 +113,7 @@ body {
 
 .card {
     position: relative;
-    width: min(500px, 92vw);
-    min-height: min(780px, 92vh);
+    width: min(480px, 100%);
     opacity: 0;
     transform: translateY(16px);
     animation: cardReveal .9s ease forwards;
@@ -125,8 +126,8 @@ body {
     background-size: cover;
     background-position: center;
 
-    padding: clamp(44px, 6vh, 64px) clamp(24px, 5vw, 50px) clamp(36px, 5vh, 52px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .14), 0 2px 6px rgba(0,0,0,.04);
+    padding: clamp(38px, 5.5vh, 56px) clamp(20px, 5vw, 44px) clamp(34px, 5vh, 48px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12), 0 2px 6px rgba(0,0,0,.04);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,12 +147,10 @@ body {
 
 .content {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    flex: 1;
+    gap: clamp(24px, 3.6vh, 36px);
 }
 
 .fade-item {
@@ -172,81 +171,95 @@ body {
 }
 
 .names-section {
-    margin-top: clamp(8px, 2vh, 18px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation-delay: 2.15s;
 }
 
 .person-name {
     font-family: 'Cinzel', serif;
-    font-size: clamp(34px, 5vw, 46px);
+    font-size: clamp(30px, 5vw, 44px);
     font-weight: 400;
     letter-spacing: .28em;
+    text-indent: .28em;
     text-transform: uppercase;
     color: #1a1a1a;
-    line-height: 1.1;
-    margin-left: .28em;
+    line-height: 1.15;
+    text-align: center;
 }
 
 .connector {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(20px, 2.8vw, 24px);
+    font-size: clamp(18px, 2.8vw, 24px);
     font-style: italic;
     font-weight: 300;
     color: #666;
-    margin: clamp(10px, 1.5vh, 16px) 0;
+    margin: 8px 0;
     letter-spacing: .04em;
+    text-align: center;
 }
 
 .date-section {
-    margin: clamp(24px, 3.5vh, 40px) 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation-delay: 2.35s;
 }
 
 .date-text {
     font-family: 'Cinzel', serif;
-    font-size: clamp(12px, 1.6vw, 14px);
+    font-size: clamp(11.5px, 1.6vw, 14px);
     font-weight: 500;
     letter-spacing: .22em;
+    text-indent: .22em;
     text-transform: uppercase;
     color: #2b2b2b;
-    margin-left: .22em;
+    text-align: center;
 }
 
 .event-type {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 2.3vw, 21px);
+    font-size: clamp(16px, 2.2vw, 21px);
     font-style: italic;
     font-weight: 300;
     color: #555;
-    margin-top: 6px;
+    margin-top: 4px;
     letter-spacing: .06em;
+    text-align: center;
 }
 
 .venue-section {
-    margin-top: auto;
-    margin-bottom: clamp(24px, 3.5vh, 36px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation-delay: 2.55s;
 }
 
 .the-lawn {
     font-family: 'Cinzel', serif;
-    font-size: clamp(11px, 1.4vw, 13px);
+    font-size: clamp(10.5px, 1.4vw, 13px);
     font-weight: 500;
     letter-spacing: .24em;
+    text-indent: .24em;
     text-transform: uppercase;
     color: #4A563C;
-    margin-bottom: 7px;
-    margin-left: .24em;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .venue-name {
     font-family: 'Cinzel', serif;
-    font-size: clamp(13px, 1.8vw, 16px);
+    font-size: clamp(12.5px, 1.8vw, 16px);
     font-weight: 600;
     letter-spacing: .20em;
+    text-indent: .20em;
     text-transform: uppercase;
     color: #1a1a1a;
-    margin-left: .20em;
+    text-align: center;
 }
 
 .footer-section {
@@ -261,14 +274,14 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: .24em;
+    text-indent: .24em;
     text-transform: uppercase;
     color: #1a1a1a;
     background: transparent;
     border: 1px solid #1a1a1a;
-    padding: 11px 32px;
+    padding: 10px 30px;
     cursor: pointer;
     transition: all 0.35s ease;
-    margin-left: .24em;
     outline: none;
 }
 
@@ -279,7 +292,7 @@ body {
 }
 
 .dresscode-group {
-    margin-top: 20px;
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,7 +301,7 @@ body {
 
 .dresscode-label {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
+    font-size: 14.5px;
     font-style: normal;
     color: #444;
     letter-spacing: .06em;
@@ -297,15 +310,17 @@ body {
 .palette-dots {
     display: flex;
     align-items: center;
-    gap: 9px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .palette-dot {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease;
+    display: inline-block;
 }
 
 .palette-dot:hover {
@@ -314,17 +329,19 @@ body {
 
 .timeline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(13px, 1.6vw, 15px);
+    font-size: clamp(12.5px, 1.5vw, 14.5px);
     font-style: normal;
     font-weight: 400;
     text-transform: none;
     letter-spacing: .02em;
     color: #444;
-    margin-top: 18px;
-    line-height: 1.5;
-    max-width: 380px;
+    margin-top: 16px;
+    line-height: 1.45;
+    max-width: 360px;
+    text-align: center;
 }
 
+/* Modal Popup */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -337,7 +354,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    padding: 20px;
+    padding: 16px;
 }
 
 .modal-overlay.active {
@@ -353,7 +370,7 @@ body {
     background-position: center;
     width: 100%;
     max-width: 420px;
-    padding: 38px 30px 34px;
+    padding: 34px 26px 30px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
     position: relative;
     transform: translateY(20px) scale(0.98);
@@ -384,25 +401,25 @@ body {
 
 .modal-title {
     font-family: 'Cinzel', serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: .2em;
+    text-indent: .2em;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 6px;
-    margin-left: .2em;
 }
 
 .modal-sub {
-    font-size: 15px;
+    font-size: 14.5px;
     font-style: italic;
     color: #666;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .form-label {
@@ -421,7 +438,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.75);
     font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
+    font-size: 16px;
     color: #111;
     outline: none;
     transition: border-color 0.25s;
@@ -435,7 +452,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 16px 0 20px;
+    margin: 14px 0 18px;
     cursor: pointer;
     user-select: none;
 }
@@ -457,18 +474,18 @@ body {
 
 .btn-submit {
     width: 100%;
-    margin-top: 8px;
+    margin-top: 6px;
     font-family: 'Cinzel', serif;
-    font-size: 12px;
+    font-size: 11.5px;
     letter-spacing: .22em;
+    text-indent: .22em;
     text-transform: uppercase;
     color: #fff;
     background: #111;
     border: 1px solid #111;
-    padding: 12px;
+    padding: 11px;
     cursor: pointer;
     transition: all 0.3s;
-    margin-left: .11em;
 }
 
 .btn-submit:hover:not(:disabled) {
@@ -489,49 +506,55 @@ body {
 
 .success-box .success-headline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 500;
     line-height: 1.35;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: #111;
 }
 
 .success-box .success-body {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
+    font-size: 16px;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 1.55;
     color: #444;
 }
 
 #status-msg {
-    margin-top: 14px;
+    margin-top: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 11.5px;
     letter-spacing: .03em;
     text-align: center;
     line-height: 1.4;
     min-height: 18px;
 }
 
-@media(max-width:480px){
+
+@media (max-width: 480px) {
     body {
-        padding: 24px 12px;
+        padding: 16px 12px;
+        align-items: center; 
     }
     .card {
         width: 100%;
-        min-height: 640px;
-        padding: 40px 18px 34px;
+        max-width: 390px;
+        padding: 36px 18px 30px;
+    }
+    .content {
+        gap: 22px;
     }
     .person-name {
-        font-size: 30px;
+        font-size: 28px;
     }
     .timeline {
-        font-size: 13px;
-        margin-top: 14px;
+        font-size: 12.5px;
+        margin-top: 12px;
+        padding: 0 4px;
     }
     .modal-card {
-        padding: 30px 20px;
+        padding: 28px 18px;
     }
 }
 </style>
@@ -574,7 +597,6 @@ body {
                 <div class="palette-dots">
                     <span class="palette-dot" style="background-color: #FAF7F2;"></span>
                     <span class="palette-dot" style="background-color: #F6E7B4;"></span>
-
                     <span class="palette-dot" style="background-color: #3D4339;"></span>
                 </div>
             </div>
@@ -644,7 +666,7 @@ body {
         "background: #111; color: #fff; font-size: 16px; padding: 6px 12px; border-radius: 4px; font-weight: bold;"
     );
     console.log(
-        "%cĐi ăn cưới thì nhớ đi đúng giờ + phong bì thật dày nha <3",
+        "%cĐi ăn cưới thì nhớ đi đúng giờ + mừng phong bì thật dày nhoaaa <3",
         "color: #666; font-size: 13px; font-style: italic;"
     );
 
